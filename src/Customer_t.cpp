@@ -45,7 +45,7 @@ int main() {
         assert(customer.getName() == "Fred");
 
         // one rental
-        customer.addRental(Rental(Movie("A", Movie::REGULAR), 1));
+        customer.addRental(Rental(Video("A", Video::REGULAR), 1));
 
         // test using external file
         std::ifstream finput("Customer_t.onerental.txt");
@@ -59,11 +59,11 @@ int main() {
     {
         Customer customer("Fred");
 
-        // Create movies
-        Movie lotr("Lord of the Rings", Movie::REGULAR);
-        Movie hp("Harry Potter", Movie::CHILDRENS);
+        // Create videos
+        Video lotr("Lord of the Rings", Video::REGULAR);
+        Video hp("Harry Potter", Video::CHILDRENS);
 
-        // Create rentals of these movies
+        // Create rentals of these videos
         Rental r1(lotr, 10);
         Rental r2(hp, 5);
 
